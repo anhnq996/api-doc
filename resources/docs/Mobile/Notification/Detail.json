@@ -1,0 +1,31 @@
+{
+    "name": "Chi tiết thông báo",
+    "description": "Chi tiết thông báo, nội dung hiển thị dạng HTML",
+    "path": "/v1/mobile/notification/detail",
+    "method": "GET",
+    "data_type": "json",
+    "headers": {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+    },
+    "body": [
+        {
+            "field": "id",
+            "type": "Int",
+            "required": "Yes"
+        }
+    ],
+    "sample_request": {
+        "id": 1
+    },
+    "sample_response": {
+        "success": true,
+        "code": "S1000",
+        "message": "Thành công.",
+        "data": {
+            "id": 1,
+            "title": "Thử đuổi việc",
+            "content": "Bạn đã bị đuổi việc do ngủ trong giờ làm"
+        }
+    }
+}

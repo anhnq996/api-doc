@@ -1,0 +1,52 @@
+{
+    "name": "Danh sách thông báo",
+    "description": "Danh sách thông báo",
+    "path": "/v1/mobile/notification/list",
+    "method": "GET",
+    "data_type": "json",
+    "headers": {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+    },
+    "body": [
+        {
+            "field": "keyword",
+            "type": "String",
+            "required": "No",
+            "note": "Tìm theo tiêu đề, nội dung"
+        },
+        {
+            "field": "limit",
+            "type": "Int",
+            "required": "No",
+            "note": "-1 để không phân trang",
+            "default": 15
+        },
+        {
+            "field": "page",
+            "type": "Int",
+            "required": "No",
+            "default": 1
+        }
+    ],
+    "sample_request": {
+        "id": 1
+    },
+    "sample_response": {
+        "success": true,
+        "code": "S1000",
+        "message": "Thành công.",
+        "data": [
+            {
+                "id": 2,
+                "title": "Thử đuổi việc",
+                "content": "Bạn đã bị đuổi việc do ngủ trong giờ làm"
+            },
+            {
+                "id": 1,
+                "title": "Thử đuổi việc",
+                "content": "Bạn đã bị đuổi việc do ngủ trong giờ làm"
+            }
+        ]
+    }
+}
